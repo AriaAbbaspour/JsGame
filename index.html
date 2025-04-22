@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rock, Paper, Scissors</h1>
+        <button id="rules-btn" class="rules-btn">How to Play</button>
+        <div id="rules" class="rules hidden">
+            <p>Choose Rock, Paper, or Scissors. Rock beats Scissors, Scissors beats Paper, Paper beats Rock. Play against the computer and track your score!</p>
+        </div>
+        <div class="game-area">
+            <div class="choices">
+                <h3>Your Choice</h3>
+                <div class="buttons">
+                    <button id="rock" class="choice-btn" title="Rock" aria-label="Choose Rock"><i class="fas fa-hand-rock"></i></button>
+                    <button id="paper" class="choice-btn" title="Paper" aria-label="Choose Paper"><i class="fas fa-hand-paper"></i></button>
+                    <button id="scissors" class="choice-btn" title="Scissors" aria-label="Choose Scissors"><i class="fas fa-hand-scissors"></i></button>
+                </div>
+            </div>
+            <div class="result">
+                <h3>Result</h3>
+                <div class="result-icons">
+                    <div id="player-choice"><i class="fas fa-question"></i></div>
+                    <div id="computer-choice"><i class="fas fa-question"></i></div>
+                </div>
+                <div class="result-text">
+                    <p id="player-choice-text">You chose: --</p>
+                    <p id="computer-choice-text">Computer chose: --</p>
+                </div>
+                <p id="round-result" class="hidden">--</p>
+                <div id="loading" class="loading hidden"><i class="fas fa-spinner fa-spin"></i> Loading...</div>
+            </div>
+        </div>
+        <div class="scoreboard">
+            <h3>Scoreboard</h3>
+            <p>Wins: <span id="wins">0</span> | Losses: <span id="losses">0</span> | Ties: <span id="ties">0</span></p>
+            <button id="reset-btn" class="rules-btn">Reset Scoreboard</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
